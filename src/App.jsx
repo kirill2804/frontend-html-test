@@ -3,12 +3,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./components/Sidebar";
 
+import { ThemeProvider } from './providers/ThemeProvider';
+
 library.add(fas);
 
-export default class App extends React.Component{
-  render () {
+function App(){
+  
       return (
-          <Sidebar />
+        <ThemeProvider>
+            <Sidebar />
+        </ThemeProvider>
       )
-  }
+
 }
+
+
+export default App
